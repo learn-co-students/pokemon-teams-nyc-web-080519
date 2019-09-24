@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return response.json()
     })
     .then(function(data) {
-        data.forEach(function(trainer) {
-
+        data.forEach(function(trainer) 
             // let pokemon = trainer.pokemons.map(function(pokemon) {
             //     return  `<li>${pokemon.nickname} (${pokemon.species}) <button class="release" data-pokemon-id="${pokemon.id}">Release</button></li>`
             // }).join("")
