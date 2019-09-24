@@ -39,6 +39,7 @@ function renderTrainer(trainer) {
       </ul>
       </div>
   `)
+
   pokemons.forEach(pokemon => {
     renderPokemon(pokemon, trainerId)
   })  
@@ -46,6 +47,7 @@ function renderTrainer(trainer) {
 
 function renderPokemon(pokemon, trainerId) {
   const pokemonContainer = trainerContainer.querySelector(`[data-id='${trainerId}'] ul`)
+
   pokemonContainer.insertAdjacentHTML("beforeend", `
     <li>${pokemon.nickname} (${pokemon.species}) <button class="release" data-pokemon-id="${pokemon.id}" data-action="release">Release</button></li>
   `)
@@ -54,6 +56,7 @@ function renderPokemon(pokemon, trainerId) {
 trainerContainer.addEventListener("click", e => {
   //add a pokemon
   if (e.target.dataset.action === "add") {
+
     let trainerId = e.target.dataset.trainerId
     let postBody = {
       trainer_id: trainerId
